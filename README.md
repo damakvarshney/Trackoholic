@@ -51,3 +51,34 @@ Run:
     npm run tunnel
 
 Then within `/app/src/api/tracker.js`. Update `http://localhost:3000` with the "Forwarding" address that ngrok provided.
+
+## ScreenShots
+
+These all are the screenshots related to Trackoholic, ranging from SplashScreen to Account Screen. All Screens are designed in `@AdobeXD`.
+
+### SplashScreen
+![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/SplashScreen.png?raw=true "SplashScreen")
+
+### WelcomeScreen
+![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/WelcomeScreen.png?raw=true "SplashScreen")
+
+### RegisterScreen
+![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/RegisterScreen.png?raw=true "SplashScreen")
+
+### LoginScreen
+![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/LoginScreen.png?raw=true "SplashScreen")
+
+### LoadingScreen
+![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/LoadingScreen.png?raw=true "SplashScreen")
+
+### KeyBoardAvoidingView
+![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/KeyBoardAvoidingView.png?raw=true "SplashScreen")
+
+### TrackCreateScreen
+![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/TrackCreateScreen.png?raw=true "SplashScreen")
+
+### AccountScreen
+![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/AccountScreen.png?raw=true "SplashScreen")
+
+
+

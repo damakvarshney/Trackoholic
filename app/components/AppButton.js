@@ -24,14 +24,14 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     justifyContent: "center",
     alignItems: "center",
-    padding: 12,
+    padding: 10,
     width: "100%",
-    marginVertical: 10,
+    marginTop: 10,
   },
 
   text: {
     textTransform: "uppercase",
     fontWeight: "bold",
-    fontSize: 16,
+    fontSize: 14,
   },
 });

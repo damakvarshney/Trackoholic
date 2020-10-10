@@ -26,11 +26,11 @@ const styles = StyleSheet.create({
     backgroundColor: colors.light,
     borderRadius: 30,
     flexDirection: "row",
-    padding: 10,
+    padding: 4,
   },
   icon: {
-    marginRight: 10,
-    paddingTop: 5,
+    marginRight: 8,
+    paddingTop: 3,
   },
 });
 

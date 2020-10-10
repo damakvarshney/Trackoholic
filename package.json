@@ -23,6 +23,8 @@
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",
     "react-native-dialog": "^5.6.0",
+    "react-native-element": "^1.2.1",
+    "react-native-elements": "^2.3.2",
     "react-native-gesture-handler": "^1.8.0",
     "react-native-maps": "^0.27.1",
     "react-native-reanimated": "^1.13.1",

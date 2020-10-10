@@ -1,5 +1,5 @@
 import "../_mockLocation";
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useCallback } from "react";
 import { View, StyleSheet } from "react-native";
 import Map from "../components/Map";
 import ErrorMessage from "./../components/ErrorMessage";
@@ -12,22 +12,29 @@ import colors from "../config/colors";
 import AppTextInput from "./../components/AppTextInput";
 import { FontAwesome5 } from "@expo/vector-icons";
 import Blinker from "../components/Blinker";
+import useSaveTrack from "../hooks/useSaveTrack";
 
 const TrackCreateScreen = () => {
   const isFocused = useIsFocused();
-  const [trackName, setTrackName] = useState("");
-
+  //useContext
   const {
-    state,
+    state: { recording, locations, name },
     addLocation,
     startRecording,
     stopRecording,
     changeName,
   } = useContext(LocationContext);
-  const [error] = useLocation(isFocused, (location) =>
-    addLocation(location, state.recording)
+  //useCallback
+  const callBack = useCallback(
+    (location) => {
+      addLocation(location, recording);
+    },
+    [recording]
   );
-  console.log(state.location.length);
+  //useLocation
+  const [error] = useLocation(isFocused || recording, callBack);
+  const [saveTrack] = useSaveTrack();
+  console.log(locations.length);
   return (
     <View style={styles.container}>
       <Map mapStyle={styles.map} />
@@ -39,7 +46,7 @@ const TrackCreateScreen = () => {
       )}
       <View style={styles.recordContainer}>
         <View style={styles.blinkerView}>
-          <Blinker recordBoolean={state.recording} />
+          <Blinker recordBoolean={recording} />
         </View>
 
         <FontAwesome5 name="map-marker-alt" size={30} color="white" />
@@ -51,13 +58,14 @@ const TrackCreateScreen = () => {
           icon="add-location"
           placeholder="Track Name"
           width="100%"
-          value={state.name}
+          value={name}
           onChangeText={changeName}
         />
-        {state.recording ? (
+        {recording ? (
           <AppButton
             buttonStyle={styles.button}
             title="Stop"
+            disabled={name === ""}
             titleColor={colors.brightPurple}
             onPress={stopRecording}
           />
@@ -69,6 +77,14 @@ const TrackCreateScreen = () => {
             onPress={startRecording}
           />
         )}
+        {recording === false && locations.length !== 0 ? (
+          <AppButton
+            buttonStyle={styles.button}
+            title="Save Now"
+            titleColor={colors.brightPurple}
+            onPress={saveTrack}
+          />
+        ) : null}
       </View>
     </View>
   );
@@ -106,7 +122,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   button: {
-    fontSize: 16,
+    fontSize: 14,
     backgroundColor: colors.white,
   },
   detail: {
@@ -114,7 +130,7 @@ const styles = StyleSheet.create({
     color: colors.white,
     textAlign: "center",
     paddingTop: 10,
-    marginBottom: 20,
+    marginBottom: 15,
   },
   blinkerView: {
     width: 30,

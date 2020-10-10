@@ -12,10 +12,8 @@ import {
 import ResolveAuthScreen from "./app/screens/ResolveAuthScreen";
 import { navigationRef } from "./app/navigator/rootNavigation";
 import { StatusBar } from "react-native";
-import {
-  Context as LocationContext,
-  Provider as LocationProvider,
-} from "./app/context/LocationContext";
+import { Provider as LocationProvider } from "./app/context/LocationContext";
+import { Provider as TrackProvider } from "./app/context/TrackContext";
 
 const Stack = createStackNavigator();
 
@@ -41,10 +39,12 @@ const App = () => {
 };
 export default () => {
   return (
-    <LocationProvider>
-      <AuthProvider>
-        <App />
-      </AuthProvider>
-    </LocationProvider>
+    <TrackProvider>
+      <LocationProvider>
+        <AuthProvider>
+          <App />
+        </AuthProvider>
+      </LocationProvider>
+    </TrackProvider>
   );
 };

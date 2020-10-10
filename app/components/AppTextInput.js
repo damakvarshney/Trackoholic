@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     flexDirection: "row",
     padding: 4,
+    marginTop: 10,
   },
   icon: {
     marginRight: 8,

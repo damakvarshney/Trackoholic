@@ -10,9 +10,9 @@ import AppText from "./../components/AppText";
 import AppButton from "./../components/AppButton";
 import colors from "../config/colors";
 import AppTextInput from "./../components/AppTextInput";
-import { FontAwesome5 } from "@expo/vector-icons";
 import Blinker from "../components/Blinker";
 import useSaveTrack from "../hooks/useSaveTrack";
+import AppIcon from "../components/AppIcon";
 
 const TrackCreateScreen = () => {
   const isFocused = useIsFocused();
@@ -35,6 +35,7 @@ const TrackCreateScreen = () => {
   const [error] = useLocation(isFocused || recording, callBack);
   const [saveTrack] = useSaveTrack();
   console.log(locations.length);
+
   return (
     <View style={styles.container}>
       <Map mapStyle={styles.map} />
@@ -48,24 +49,23 @@ const TrackCreateScreen = () => {
         <View style={styles.blinkerView}>
           <Blinker recordBoolean={recording} />
         </View>
-
-        <FontAwesome5 name="map-marker-alt" size={30} color="white" />
-        <AppText style={styles.text}>Trackoholic</AppText>
+        <AppIcon />
         <AppText style={styles.detail}>
           {"Your Current Location above."}
         </AppText>
-        <AppTextInput
-          icon="add-location"
-          placeholder="Track Name"
-          width="100%"
-          value={name}
-          onChangeText={changeName}
-        />
+        {recording === false && locations.length !== 0 ? (
+          <AppTextInput
+            icon="add-location"
+            placeholder="Track Name"
+            width="100%"
+            value={name}
+            onChangeText={changeName}
+          />
+        ) : null}
         {recording ? (
           <AppButton
             buttonStyle={styles.button}
             title="Stop"
-            disabled={name === ""}
             titleColor={colors.brightPurple}
             onPress={stopRecording}
           />

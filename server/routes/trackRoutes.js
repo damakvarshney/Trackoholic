@@ -32,4 +32,13 @@ router.post("/tracks", async (req, res) => {
   }
 });
 
+// router.delete("/tracks/:id",async(req,res)=>{
+//   const userIndex = getUserIndex(req.params.userId)
+
+//  if (userIndex === -1) return res.status(404).json({})
+
+//  users.splice(userIndex, 1)
+//  res.json(users)
+// })
+
 module.exports = router;

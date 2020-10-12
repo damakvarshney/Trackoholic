@@ -1,38 +1,63 @@
 import React, { useContext } from "react";
 import { View, StyleSheet } from "react-native";
-import { Text } from "react-native-elements";
-import { Context } from "../context/TrackContext";
-import Spacer from "../components/Spacer";
-import MapView, { Polyline } from "react-native-maps";
+import MapView from "react-native-maps";
+import AppIcon from "../components/AppIcon";
+import colors from "../config/colors";
+import AppText from "./../components/AppText";
 
-const TrackDetailScreen = ({ navigation }) => {
-  const _id = navigation.getParam("id");
-  const { state } = useContext(Context);
-
-  const track = state.find((t) => t._id === _id);
+const TrackDetailScreen = ({ navigation, route }) => {
+  const track = route.params.track;
+  console.log(track);
 
   return (
-    <>
-      <Spacer>
-        <Text h3>{track.name}</Text>
-        <MapView
-          style={styles.map}
-          initialRegion={{
-            ...track.locations[0].coords,
-            longitudeDelta: 0.01,
-            latitudeDelta: 0.01,
-          }}
-        >
-          <Polyline coordinates={track.locations.map((loc) => loc.coords)} />
-        </MapView>
-      </Spacer>
-    </>
+    <View style={styles.container}>
+      <AppIcon />
+      <AppText style={styles.text}>{track.name}</AppText>
+      <MapView
+        style={styles.mapStyle}
+        initialRegion={{
+          ...track.locations[0].coords,
+          longitudeDelta: 0.005,
+          latitudeDelta: 0.005,
+        }}
+      >
+        <MapView.Circle
+          center={track.locations[0].coords}
+          radius={15}
+          strokeColor="rgba(158, 158, 255, 1.0)"
+          fillColor="rgba(158, 158, 255, 0.3)"
+        />
+        <MapView.Marker
+          coordinate={track.locations[0].coords}
+          title="Damak Agencies"
+          description="Home"
+        />
+        <MapView.Polyline
+          coordinates={track.locations.map((loc) => loc.coords)}
+          strokeColor={colors.blurDodger}
+          fillColor="#1e90ff"
+          strokeWidth={5}
+        />
+      </MapView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  map: {
-    height: 300,
+  container: {
+    flex: 1,
+    backgroundColor: colors.brightPurple,
+    paddingTop: 20,
+  },
+  mapStyle: {
+    flex: 1,
+    borderRadius: 20,
+  },
+  text: {
+    fontSize: 24,
+    color: colors.white,
+    textAlign: "center",
+    paddingBottom: 20,
   },
 });
 

@@ -1,8 +1,6 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import { View, StyleSheet, ImageBackground } from "react-native";
 import colors from "../config/colors";
-import { Context } from "../context/AuthContext";
-
 import AppButton from "./../components/AppButton";
 import TitleBar from "./../components/TitleBar";
 
@@ -12,7 +10,7 @@ const WelcomeScreen = ({ navigation }) => {
       style={styles.container}
       source={require("../assets/background.png")}
     >
-      <TitleBar title="Track Me" titleBarStyle={{ margin: 15 }} />
+      <TitleBar title="Trackoholic" titleBarStyle={{ margin: 15 }} />
       <View style={styles.buttonContainer}>
         <AppButton
           title="Register"

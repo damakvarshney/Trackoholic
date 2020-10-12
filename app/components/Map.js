@@ -20,8 +20,8 @@ const Map = ({ mapStyle }) => {
         style={mapStyle}
         initialRegion={{
           ...currentLocation.coords,
-          longitudeDelta: 0.005,
-          latitudeDelta: 0.005,
+          longitudeDelta: 0.01,
+          latitudeDelta: 0.01,
         }}
       >
         <MapView.Circle

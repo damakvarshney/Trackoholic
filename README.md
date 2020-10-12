@@ -77,6 +77,12 @@ These all are the screenshots related to Trackoholic, ranging from SplashScreen 
 ### TrackCreateScreen
 ![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/TrackCreateScreen.png?raw=true "SplashScreen")
 
+### TrackListScreen
+![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/Android%20Emulator%20-%20R_play_5554%2010_12_2020%206_43_09%20PM.png?raw=true "SplashScreen")
+
+### TrackDetailScreen
+![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/Android%20Emulator%20-%20R_play_5554%2010_12_2020%206_43_53%20PM.png?raw=true "SplashScreen")
+
 ### AccountScreen
 ![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/AccountScreen.png?raw=true "SplashScreen")
 

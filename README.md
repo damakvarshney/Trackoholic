@@ -11,8 +11,6 @@ A tracking app with the following features:
 
 The backend is using mongoDB to help provide a set of CRUD services which the APP uses.
 
-App developed as part of the "complete react native and redux course" on [Udemy]([https://www.udemy.com/course/the-complete-react-native-and-redux-course/).
-
 ## Installation
 
 Within both the `/app` & `/server` directory install the npm packages with:

@@ -54,7 +54,6 @@ Then within `/app/src/api/tracker.js`. Update `http://localhost:3000` with the "
 
 These all are the screenshots related to Trackoholic, ranging from SplashScreen to Account Screen. All Screens are designed in `@AdobeXD`.
 
-### SplashScreen
 ![Alt text](https://raw.githubusercontent.com/damakvarshney/Trackoholic/master/ScreenShots/Trackoholic.png?raw=true "SplashScreen")
 
 

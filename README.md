@@ -55,34 +55,7 @@ Then within `/app/src/api/tracker.js`. Update `http://localhost:3000` with the "
 These all are the screenshots related to Trackoholic, ranging from SplashScreen to Account Screen. All Screens are designed in `@AdobeXD`.
 
 ### SplashScreen
-![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/SplashScreen.png?raw=true "SplashScreen")
-
-### WelcomeScreen
-![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/WelcomeScreen.png?raw=true "SplashScreen")
-
-### RegisterScreen
-![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/RegisterScreen.png?raw=true "SplashScreen")
-
-### LoginScreen
-![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/LoginScreen.png?raw=true "SplashScreen")
-
-### LoadingScreen
-![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/LoadingScreen.png?raw=true "SplashScreen")
-
-### KeyBoardAvoidingView
-![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/KeyBoardAvoidingView.png?raw=true "SplashScreen")
-
-### TrackCreateScreen
-![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/TrackCreateScreen.png?raw=true "SplashScreen")
-
-### TrackListScreen
-![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/Android%20Emulator%20-%20R_play_5554%2010_12_2020%206_43_09%20PM.png?raw=true "SplashScreen")
-
-### TrackDetailScreen
-![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/Android%20Emulator%20-%20R_play_5554%2010_12_2020%206_43_53%20PM.png?raw=true "SplashScreen")
-
-### AccountScreen
-![Alt text](https://github.com/damakvarshney/Trackoholic/blob/master/ScreenShots/AccountScreen.png?raw=true "SplashScreen")
+![Alt text](https://raw.githubusercontent.com/damakvarshney/Trackoholic/master/ScreenShots/Trackoholic.png?raw=true "SplashScreen")
 
 
 
